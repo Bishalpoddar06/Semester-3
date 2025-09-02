@@ -1,0 +1,12 @@
+Create overloaded functions to manipulate strings in different ways:
+i. concatenation,
+ii. repetition,
+iii. substring extraction,
+iv. case conversion
+2. Create overloaded functions to perform mathematical operations such as add, subtract, multiply, divide, that work with integers, floats.
+3. Create overloaded functions to process arrays of different types such as int, double, char with different operations
+          i. sort,
+          ii. reverse,
+          iii. max/min.
+
+4. Create overloaded functions to calculate area and perimeter for different geometric shapes such as circle, rectangle, triangle using different parameter combinations.
