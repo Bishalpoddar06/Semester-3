@@ -1,15 +1,12 @@
 /*
-write a program in C to perform the following stack operations with a menu based system. Observe the fow of data in stack and write the outputs in your laboratory notes.
-i. push- add item to stack.(print overflow if stack is full)
-ii. pop- remove item from stack
-iii. peek - see the top item of stack
-iv. view - gives the view of the stack
-Instruction:- 1. You may use a global integer for the stack.
+Do the same as 1 but use pointers and dynamic memory allocation.
 */
 #include <stdio.h>
+#include <stdlib.h>
+
 #define MAX 5
 
-int stack[MAX];
+int *stack = NULL;
 int top = -1;
 
 // Push operation
@@ -54,6 +51,11 @@ void view() {
 
 int main() {
     int choice, item;
+    stack = (int*)malloc(MAX * sizeof(int));
+    if (stack == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
     while (1) {
         printf("\n--- Stack Menu ---\n");
         printf("1. Push\n2. Pop\n3. Peek\n4. View\n5. Exit\n");
@@ -76,6 +78,7 @@ int main() {
                 break;
             case 5:
                 printf("Exiting...\n");
+                free(stack);
                 return 0;
             default:
                 printf("Invalid choice!\n");
@@ -84,7 +87,8 @@ int main() {
     return 0;
 }
 
-/*output
+
+/*OUTPUT
 --- Stack Menu ---
 1. Push
 2. Pop
@@ -147,4 +151,4 @@ Stack elements: 10
 3. Peek
 4. View
 5. Exit
-Enter your*/
+Enter your choice:*/
