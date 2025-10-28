@@ -102,7 +102,7 @@ public:
 int main()
 { 
     Book b1;
-    Book b2("1984", "George Orwell");
+    Book b2("Hall of Fame", "George Orwell");
     cout << "Books:\n";
     b1.display();
     b2.display();
@@ -128,7 +128,7 @@ int main()
 -----OUTPUT-----
 Books:
 Title: Game of Thrones, Author: Jorge Martin
-Title: 1984, Author: George Orwell
+Title: Hall of Fame, Author: George Orwell
 
 Rectangle Areas:
 Default: 0
